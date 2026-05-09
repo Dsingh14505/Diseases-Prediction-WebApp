@@ -4,4 +4,3 @@ requests
 fastapi
 pydantic              
 uvicorn
-python
