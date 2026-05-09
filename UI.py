@@ -31,9 +31,10 @@ if selected == "Heart":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        Age = st.number_input("Age")
+        Age = st.selectbox("Age", list(range(1,101)))
     with col2:
-        Sex = st.number_input("Sex")    
+        Sex = st.selectbox("Sex", ["Male", "Female"])
+        Sex = 1 if Sex =="Male" else 0 
     with col3:
         cp  = st.number_input("ChestPain")    
     with col1:
@@ -96,7 +97,7 @@ if selected == "Diabetes":
     with col2:
         Glucose =st.number_input("Glucose")
         Insulin = st.number_input("Insulin")
-        Age = st.number_input("Age")
+        Age = st.selectbox("Age", list(range(1,101)))
     with col3:
         BloodPressure = st.number_input("BloodPressure")
         bmi_diabetes = st.number_input("BMI")
