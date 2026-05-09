@@ -4,13 +4,21 @@ import requests
 import pickle 
 import numpy as np 
 import pandas as pd
+import os
 
 app = FastAPI()
 
 # Load Saved Models 
-heart_model = pickle.load(open("D:/Disease_pred_API/saved_models/heart.sav", "rb"))
-diabetes_model = pickle.load(open("D:/Disease_pred_API/saved_models/diabetes.sav", "rb"))
-breast_cancer_model = pickle.load(open("D:/Disease_pred_API/saved_models/breast_cancer.sav", "rb"))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+heart_model_path = os.path.join(BASE_DIR, "saved_models", "heart.sav")
+heart_model = pickle.load(open(heart_model_path, "rb"))
+
+diabetes_model_path = os.path.join(BASE_DIR, "saved_models", "diabetes.sav")
+diabetes_model = pickle.load(open(diabetes_model_path, "rb"))
+
+breast_cancer_model_path = os.path.join(BASE_DIR, "saved_models", "breast_cancer.sav")
+breast_cancer_model = pickle.load(open(breast_cancer_model_path, "rb"))
 
 class heart_inputs(BaseModel):
         age : float
