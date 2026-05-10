@@ -1,11 +1,10 @@
 import requests 
 import streamlit as st
 from  streamlit_option_menu import option_menu
-heart_url = "https://diseases-prediction-webapp-4.onrender.com/predict/heart"
 
-
-diabetes_url = "https://diseases-prediction-webapp-4.onrender.com/predict/diabetes"
-cancer_url = "https://diseases-prediction-webapp-4.onrender.com/predict/breast-cancer"
+heart_url = "https://diseases-prediction-webapp-api.onrender.com/predict/heart"
+diabetes_url = "https://diseases-prediction-webapp-api.onrender.com/predict/diabetes"
+cancer_url = "https://diseases-prediction-webapp-api.onrender.com/predict/breast-cancer"
 
 # Create Sidebar
 with st.sidebar:
